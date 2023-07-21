@@ -8,10 +8,9 @@ function getAllPolicyholders(_req, res) {
 
 function createPolicyholder(req, res) {
   const validation = validationResult(req);
-
   if (!validation.isEmpty()) {
     return res.status(400).json(validation.array());
-  } 
+  }
   const newPolicyholder = matchedData(req); // req.body validado
 
   if (findPolicyholderById(newPolicyholder.id)) {
@@ -32,14 +31,11 @@ function createPolicyholder(req, res) {
 
 function getPolicyholderById(req, res) {
   // Implementação do desafio:
-    const policyholderId = req.params.policyholderId;
-    const policyholder = findPolicyholderById(policyholderId);
+  const newPolicyholder = matchedData(req);
+  const policyholders = findPolicyholderById(newPolicyholder.policyholderId);
 
-    if (!policyholder) {
-      return res.status(404).json();
-    }
-    return res.json(policyholder);
-  }
+  !policyholders ? res.status(404).json() : res.json(policyholders)
+}
 
 module.exports = {
   getAllPolicyholders,
