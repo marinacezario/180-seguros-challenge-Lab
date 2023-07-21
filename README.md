@@ -29,7 +29,7 @@ Para visualizar o resultado deste desafio, siga as etapas abaixo. Certifique-se 
 Passo 1: Execute o seguinte comando para clonar o repositório na sua máquina:
 
 ```bash
-git clone https://github.com/PolyanaCristinaFeitoza/Desafio-180S.git
+git clone https://github.com/marinacezario/180-seguros-challenge-Lab.git
 ```
 
 Passo 2: Acesse a pasta raiz do projeto:
